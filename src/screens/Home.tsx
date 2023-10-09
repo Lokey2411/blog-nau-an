@@ -50,6 +50,7 @@ export default function Home() {
 						<DecorationText
 							text="garan"
 							color={colors.secondary}
+							gap={4}
 						/>
 					</div>
 				</div>
