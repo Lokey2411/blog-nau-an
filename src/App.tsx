@@ -5,6 +5,7 @@ import Recipe from "./screens/Recipe";
 import Summary from "./screens/Summary";
 import Contact from "./screens/Contact";
 import Introduction from "./screens/Introduction";
+import Blog from "./screens/Blog";
 
 export default function App() {
 	return (
@@ -33,6 +34,10 @@ export default function App() {
 				<Route
 					path="/gioi-thieu"
 					element={<Introduction />}
+				/>
+				<Route
+					path="/blog"
+					element={<Blog />}
 				/>
 			</Routes>
 		</BrowserRouter>

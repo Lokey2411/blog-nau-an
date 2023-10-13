@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiFillHeart, AiOutlineEye, AiOutlineHeart } from "react-icons/ai";
 import { colors } from "../../styles/colors";
 import Statistic from "../Statistic";
@@ -6,10 +6,24 @@ import { BsFillChatLeftFill } from "react-icons/bs";
 import { FaCrown } from "react-icons/fa";
 import { styles } from "../../styles/styles";
 import { BlogProps } from "../../types/blog";
+import { useNavigate } from "react-router-dom";
+import { limitedChar } from "../../data/functions";
 
 export default function HBlog(props: BlogProps) {
+	const navigate = useNavigate();
+	const [isFavorite, setIsFavorite] = useState(false);
+	const toBlogHandler = () => {
+		navigate("blog", { state: { id: props.id } });
+	};
+	document.getElementById("js-favorite")?.addEventListener("click", (event) => event.preventDefault());
+	const toggleFavoriteHandler = () => {
+		setIsFavorite((prevState) => !prevState);
+	};
 	return (
-		<div className="w-[100%] ml-6 border h-fit pb-4 my-6">
+		<div
+			className="w-[100%] ml-6 border h-fit pb-4 my-6 cursor-pointer"
+			onClick={toBlogHandler}
+		>
 			<img
 				src={props.blogImageSource}
 				alt=""
@@ -33,7 +47,7 @@ export default function HBlog(props: BlogProps) {
 						<FaCrown className="ml-1" />
 					</div>
 					<p className="uppercase text-3xl">{props.postTitle}</p>
-					<p className="text-[12px]">{props.postContent}</p>
+					<p className="text-[12px]">{limitedChar(props.postContent, 125)}</p>
 				</div>
 				<div className="flex justify-between mt-2">
 					<div className="flex items-center">
@@ -46,8 +60,11 @@ export default function HBlog(props: BlogProps) {
 							number={props.commenter}
 						/>
 					</div>
-					<div>
-						{props.isFavorite ? (
+					<div
+						onClick={toggleFavoriteHandler}
+						id="js-favorite"
+					>
+						{isFavorite ? (
 							<AiFillHeart
 								color={colors.secondary}
 								size={24}

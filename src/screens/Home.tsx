@@ -55,10 +55,10 @@ export default function Home() {
 					</div>
 				</div>
 				<div className="flex flex-col w-[40%]">
-					{blogs.map((blog, index) => (
+					{blogs.map((blog) => (
 						<HBlog
 							{...blog}
-							key={index}
+							key={blog.id}
 						/>
 					))}
 				</div>
