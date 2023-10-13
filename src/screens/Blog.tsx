@@ -14,7 +14,7 @@ const Blog = () => {
 	const { state } = useLocation();
 	const blog = blogs.find((item) => item.id === state.id);
 	return (
-		<div>
+		<div className="bg-gray-100">
 			<HeaderNavigation />
 			<Slogan />
 			<div className="m-auto w-3/5 py-6">
