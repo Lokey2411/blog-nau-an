@@ -1,16 +1,20 @@
+export interface PostType {
+	imageSource: string;
+	desc: string;
+	poster: string;
+	date: string;
+	time: string;
+	title: string;
+	content: string;
+	viewer: number;
+	commenter: string;
+	isFavorite?: boolean;
+}
+
 export interface BlogProps {
 	id: string | number;
 	avatarSource: string;
-	blogImageSource: string;
-	postDesc?: string;
-	poster: string;
-	postDate?: string;
-	postTime?: string;
-	postTitle: string;
-	postContent: string;
-	viewer: number;
-	commenter: number;
-	isFavorite?: boolean;
+	post: PostType;
 	prepare: string[];
 	otherPrepare?: string[];
 	preCook: string[];

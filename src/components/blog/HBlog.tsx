@@ -25,7 +25,7 @@ export default function HBlog(props: BlogProps) {
 			onClick={toBlogHandler}
 		>
 			<img
-				src={props.blogImageSource}
+				src={props.post.imageSource}
 				alt=""
 				className="w-full mb-7"
 			/>
@@ -38,26 +38,26 @@ export default function HBlog(props: BlogProps) {
 							className={`mr-3 ${styles.avatar}`}
 						/>
 						<div>
-							<p>{props.poster}</p>
+							<p>{props.post.poster}</p>
 							<ul className=" flex justify-between pr-6">
-								<li>{props.postDate}</li>
-								<li>{props.postTime}</li>
+								<li>{props.post.date}</li>
+								<li>{props.post.time}</li>
 							</ul>
 						</div>
 						<FaCrown className="ml-1" />
 					</div>
-					<p className="uppercase text-3xl">{props.postTitle}</p>
-					<p className="text-[12px]">{limitedChar(props.postContent, 125)}</p>
+					<p className="uppercase text-3xl">{props.post.title}</p>
+					<p className="text-[12px]">{limitedChar(props.post.content, 125)}</p>
 				</div>
 				<div className="flex justify-between mt-2">
 					<div className="flex items-center">
 						<Statistic
 							icon={<AiOutlineEye />}
-							number={props.viewer}
+							number={props.post.viewer}
 						/>
 						<Statistic
 							icon={<BsFillChatLeftFill />}
-							number={props.commenter}
+							number={props.post.commenter}
 						/>
 					</div>
 					<div
