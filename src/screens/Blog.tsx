@@ -32,21 +32,21 @@ const Blog = () => {
 								className={`mr-3 ${styles.avatar}`}
 							/>
 							<div className="flex justify-between  ">
-								<p>{blog?.poster}</p>
+								<p>{blog?.post.poster}</p>
 								<FaCrown className="ml-1" />
-								<div className="mr-2">{blog?.postDate}</div>
-								<div>{blog?.postTime}</div>
+								<div className="mr-2">{blog?.post.date}</div>
+								<div>{blog?.post.time}</div>
 							</div>
 						</div>
 					</div>
-					<p className="font-bold text-[#116dff] uppercase text-2xl my-4">{blog?.postTitle}</p>
+					<p className="font-bold text-[#116dff] uppercase text-2xl my-4">{blog?.post.title}</p>
 					<img
-						src={blog?.blogImageSource}
+						src={blog?.post.imageSource}
 						alt=""
 						className="w-full mb-7"
 					/>
 					<b>Giới thiệu</b>
-					<p>- {blog?.postContent}</p>
+					<p>- {blog?.post.content}</p>
 					<UIList
 						title="Nguyên liệu chính"
 						data={blog?.prepare as string[]}

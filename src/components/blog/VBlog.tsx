@@ -40,7 +40,7 @@ export default function VBlog(props: BlogProps) {
 					<p className="text-[12px]"> {limitedChar(props.post.content, 125)}</p>
 				</div>
 				<div className="border-t flex flex-1 justify-between self-end items-center h-[12%]">
-					<div className="flex justify-between w-1/3">
+					<div className="flex justify-between w-2/5">
 						<p className="mr-1">{props.post.viewer} views</p>
 						<p>{props.post.commenter} comments</p>
 					</div>

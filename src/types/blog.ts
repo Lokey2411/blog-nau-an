@@ -7,7 +7,7 @@ export interface PostType {
 	title: string;
 	content: string;
 	viewer: number;
-	commenter: string;
+	commenter: string | number;
 	isFavorite?: boolean;
 }
 
