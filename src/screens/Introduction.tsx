@@ -1,4 +1,3 @@
-import React from "react";
 import HeaderNavigation from "../components/Header/HeaderNavigation";
 import Slogan from "../components/Slogan";
 import Footer from "../components/Footer";

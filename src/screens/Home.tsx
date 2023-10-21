@@ -7,7 +7,7 @@ import ContactInfo from "../components/ContactInfo";
 import Footer from "../components/Footer";
 import UnderlineText from "../components/UnderlineText";
 import HBlog from "../components/blog/HBlog";
-import { blogs, createBlog } from "../data/blog";
+import { blogs } from "../data/blog";
 import { useEffect, useState } from "react";
 import { BlogProps } from "../types/blog";
 import { doc, getDoc } from "firebase/firestore";

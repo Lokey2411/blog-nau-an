@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState } from "react";
+import { MouseEvent, useState } from "react";
 import { AiFillHeart, AiOutlineEye, AiOutlineHeart } from "react-icons/ai";
 import { colors } from "../../styles/colors";
 import Statistic from "../Statistic";

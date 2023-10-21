@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState } from "react";
+import { MouseEvent, useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { colors } from "../../styles/colors";
