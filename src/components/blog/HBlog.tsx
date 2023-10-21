@@ -13,7 +13,7 @@ import { firestore } from "../../firebase";
 
 export default function HBlog(props: BlogProps) {
 	const navigate = useNavigate();
-	const [isFavorite, setIsFavorite] = useState(false);
+	const [isFavorite, setIsFavorite] = useState(props.post.isFavorite);
 	const toBlogHandler = async () => {
 		const docRef = doc(firestore, "blog", props.id as string);
 		const currentBlog: BlogProps | undefined = (await getDoc(docRef)).data() as BlogProps;
