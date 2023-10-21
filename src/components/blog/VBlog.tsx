@@ -1,16 +1,43 @@
-import React from "react";
+import React, { MouseEvent, useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { colors } from "../../styles/colors";
 import { BlogProps } from "../../types/blog";
 import { useNavigate } from "react-router-dom";
 import { limitedChar } from "../../data/functions";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { firestore } from "../../firebase";
 
 export default function VBlog(props: BlogProps) {
 	const navigate = useNavigate();
 
-	const toBlogHandler = () => {
-		navigate("/blog", { state: { id: props.id } });
+	const [isFavorite, setIsFavorite] = useState(props.post.isFavorite);
+	const toBlogHandler = async () => {
+		const docRef = doc(firestore, "blog", props.id as string);
+		const currentBlog: BlogProps | undefined = (await getDoc(docRef)).data() as BlogProps;
+		let viewer = currentBlog?.post.viewer;
+		const newBlog = {
+			...currentBlog,
+			post: {
+				...currentBlog.post,
+				viewer: viewer + 1,
+			},
+		};
+		setDoc(docRef, newBlog);
+		navigate("blog", { state: { id: props.id } });
+	};
+	const favoriteHandler = (e: MouseEvent<HTMLDivElement>) => {
+		e.stopPropagation();
+		const newBlogData: BlogProps = {
+			...props,
+			post: {
+				...props.post,
+				isFavorite: !isFavorite,
+			},
+		};
+		const docRef = doc(firestore, "blog", props.id as string);
+		setDoc(docRef, newBlogData);
+		setIsFavorite((prevState) => !prevState);
 	};
 	return (
 		<div
@@ -44,8 +71,8 @@ export default function VBlog(props: BlogProps) {
 						<p className="mr-1">{props.post.viewer} views</p>
 						<p>{props.post.commenter} comments</p>
 					</div>
-					<div>
-						{props.post.isFavorite ? (
+					<div onClick={favoriteHandler}>
+						{isFavorite ? (
 							<AiFillHeart
 								color={colors.secondary}
 								size={24}

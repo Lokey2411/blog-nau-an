@@ -3,9 +3,28 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { colors } from "../styles/colors";
 import { blogs } from "../data/blog";
 import VBlog from "../components/blog/VBlog";
+import { useEffect, useState } from "react";
+import { BlogProps } from "../types/blog";
+import { firestore } from "../firebase";
+import { doc, getDoc } from "firebase/firestore";
 
 export default function Recipe() {
 	const textColor = colors.primary;
+	const [blogData, setBlogData] = useState<BlogProps[]>([]);
+	// const isFocused = useIsFocused();
+	const fetchBlogs = async () => {
+		const blogPromises = blogs.map((item) => {
+			const docRef = doc(firestore, "blog", item.id as string);
+			return getDoc(docRef);
+		});
+
+		const blogDocs = await Promise.all(blogPromises);
+		const newBlogData = blogDocs.map((doc) => doc.data() as BlogProps);
+		setBlogData(newBlogData);
+	};
+	useEffect(() => {
+		fetchBlogs();
+	}, []);
 	return (
 		<div className="bg-gray-100">
 			<HeaderNavigation active="Công thức" />
@@ -20,7 +39,7 @@ export default function Recipe() {
 						<AiOutlineSearch />
 					</div>
 				</div>
-				{blogs.map((blog, index) => (
+				{blogData.map((blog, index) => (
 					<VBlog
 						{...blog}
 						key={index}

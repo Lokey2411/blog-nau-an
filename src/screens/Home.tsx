@@ -7,9 +7,28 @@ import ContactInfo from "../components/ContactInfo";
 import Footer from "../components/Footer";
 import UnderlineText from "../components/UnderlineText";
 import HBlog from "../components/blog/HBlog";
-import { blogs } from "../data/blog";
+import { blogs, createBlog } from "../data/blog";
+import { useEffect, useState } from "react";
+import { BlogProps } from "../types/blog";
+import { doc, getDoc } from "firebase/firestore";
+import { firestore } from "../firebase";
 
 export default function Home() {
+	const [blogData, setBlogData] = useState<BlogProps[]>([]);
+	// const isFocused = useIsFocused();
+	const fetchBlogs = async () => {
+		const blogPromises = blogs.map((item) => {
+			const docRef = doc(firestore, "blog", item.id as string);
+			return getDoc(docRef);
+		});
+
+		const blogDocs = await Promise.all(blogPromises);
+		const newBlogData = blogDocs.map((doc) => doc.data() as BlogProps);
+		setBlogData(newBlogData);
+	};
+	useEffect(() => {
+		fetchBlogs();
+	}, []);
 	return (
 		<div className="bg-gray-100">
 			<HeaderNavigation active="Trang chủ" />
@@ -55,7 +74,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div className="flex flex-col w-[40%]">
-					{blogs.map((blog) => (
+					{blogData.map((blog) => (
 						<HBlog
 							{...blog}
 							key={blog.id}

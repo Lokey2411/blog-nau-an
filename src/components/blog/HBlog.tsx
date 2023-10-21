@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { MouseEvent, useState } from "react";
 import { AiFillHeart, AiOutlineEye, AiOutlineHeart } from "react-icons/ai";
 import { colors } from "../../styles/colors";
 import Statistic from "../Statistic";
@@ -8,15 +8,38 @@ import { styles } from "../../styles/styles";
 import { BlogProps } from "../../types/blog";
 import { useNavigate } from "react-router-dom";
 import { limitedChar } from "../../data/functions";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { firestore } from "../../firebase";
 
 export default function HBlog(props: BlogProps) {
 	const navigate = useNavigate();
 	const [isFavorite, setIsFavorite] = useState(false);
-	const toBlogHandler = () => {
+	const toBlogHandler = async () => {
+		const docRef = doc(firestore, "blog", props.id as string);
+		const currentBlog: BlogProps | undefined = (await getDoc(docRef)).data() as BlogProps;
+		let viewer = currentBlog?.post.viewer;
+		const newBlog = {
+			...currentBlog,
+			post: {
+				...currentBlog.post,
+				viewer: viewer + 1,
+			},
+		};
+		setDoc(docRef, newBlog);
 		navigate("blog", { state: { id: props.id } });
 	};
 	document.getElementById("js-favorite")?.addEventListener("click", (event) => event.preventDefault());
-	const toggleFavoriteHandler = () => {
+	const toggleFavoriteHandler = (e: MouseEvent<HTMLDivElement>) => {
+		e.stopPropagation();
+		const newBlogData: BlogProps = {
+			...props,
+			post: {
+				...props.post,
+				isFavorite: !isFavorite,
+			},
+		};
+		const docRef = doc(firestore, "blog", props.id as string);
+		setDoc(docRef, newBlogData);
 		setIsFavorite((prevState) => !prevState);
 	};
 	return (
