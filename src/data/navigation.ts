@@ -10,10 +10,6 @@ export const navigationData: NavigationType[] = [
 		navigateTo: "/cong-thuc",
 	},
 	{
-		label: "Tổng hợp",
-		navigateTo: "/tong-hop",
-	},
-	{
 		label: "Giới thiệu",
 		navigateTo: "/gioi-thieu",
 	},

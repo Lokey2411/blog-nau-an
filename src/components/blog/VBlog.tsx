@@ -11,7 +11,7 @@ import { firestore } from "../../firebase";
 export default function VBlog(props: BlogProps) {
 	const navigate = useNavigate();
 
-	const [isFavorite, setIsFavorite] = useState(props.post.isFavorite);
+	const [isFavorite, setIsFavorite] = useState(false);
 	const toBlogHandler = async () => {
 		const docRef = doc(firestore, "blog", props.id as string);
 		const currentBlog: BlogProps | undefined = (await getDoc(docRef)).data() as BlogProps;
@@ -24,20 +24,21 @@ export default function VBlog(props: BlogProps) {
 			},
 		};
 		setDoc(docRef, newBlog);
-		navigate("blog", { state: { id: props.id } });
+		navigate("/blog", { state: { id: props.id } });
 	};
 	const favoriteHandler = (e: MouseEvent<HTMLDivElement>) => {
 		e.stopPropagation();
+		setIsFavorite(!isFavorite);
 		const newBlogData: BlogProps = {
 			...props,
 			post: {
 				...props.post,
-				isFavorite: !isFavorite,
+				favourite: props.post.favourite + 1,
 			},
 		};
 		const docRef = doc(firestore, "blog", props.id as string);
 		setDoc(docRef, newBlogData);
-		setIsFavorite((prevState) => !prevState);
+		setIsFavorite(!isFavorite);
 	};
 	return (
 		<div
@@ -62,14 +63,14 @@ export default function VBlog(props: BlogProps) {
 					</div>
 				</div>
 				<div className="mt-6 flex-1 border-b flex flex-col h-[75%]">
-					<p className="text-[#116dff]">{props.post.desc}</p>
+					<p className="text-[#116dff]">{props.post.desc.join(", ")}</p>
 					<p className="font-bold text-[#116dff] uppercase text-2xl my-4">{props.post.title}</p>
 					<p className="text-[12px]"> {limitedChar(props.post.content, 125)}</p>
 				</div>
 				<div className="border-t flex flex-1 justify-between self-end items-center h-[12%]">
 					<div className="flex justify-between w-2/5">
 						<p className="mr-1">{props.post.viewer} views</p>
-						<p>{props.post.commenter} comments</p>
+						<p>{props.post.favourite} favourites</p>
 					</div>
 					<div onClick={favoriteHandler}>
 						{isFavorite ? (

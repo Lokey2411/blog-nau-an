@@ -11,6 +11,7 @@ import { doc, getDoc } from "firebase/firestore";
 export default function Recipe() {
 	const textColor = colors.primary;
 	const [blogData, setBlogData] = useState<BlogProps[]>([]);
+	const [blogFilter, setBlogFilter] = useState<BlogProps[]>([]);
 	// const isFocused = useIsFocused();
 	const fetchBlogs = async () => {
 		const blogPromises = blogs.map((item) => {
@@ -21,6 +22,14 @@ export default function Recipe() {
 		const blogDocs = await Promise.all(blogPromises);
 		const newBlogData = blogDocs.map((doc) => doc.data() as BlogProps);
 		setBlogData(newBlogData);
+		setBlogFilter(newBlogData);
+	};
+
+	const filterBlog = (catagory: any) => {
+		let filteredBlogs = [];
+
+		filteredBlogs = blogData.filter((blog) => blog.post.desc.includes(catagory));
+		setBlogFilter(filteredBlogs);
 	};
 	useEffect(() => {
 		fetchBlogs();
@@ -31,15 +40,30 @@ export default function Recipe() {
 			<div className="px-[120px] pt-20 ">
 				<div className="flex justify-between mx-6 my-10">
 					<div className="flex justify-between w-1/3">
-						<p className={`text-[${textColor}]`}>All Posts</p>
-						<p className={`text-[${textColor}]`}>Mỳ</p>
-						<p className={`text-[${textColor}]`}>Châu Âu</p>
+						<p
+							className={`text-[${textColor}] cursor-pointer`}
+							onClick={() => fetchBlogs()}
+						>
+							All Posts
+						</p>
+						<p
+							className={`text-[${textColor}] cursor-pointer`}
+							onClick={() => filterBlog("Mỳ")}
+						>
+							Mỳ
+						</p>
+						<p
+							className={`text-[${textColor}] cursor-pointer`}
+							onClick={() => filterBlog("Châu Âu")}
+						>
+							Châu Âu
+						</p>
 					</div>
 					<div>
 						<AiOutlineSearch />
 					</div>
 				</div>
-				{blogData.map((blog, index) => (
+				{blogFilter.map((blog, index) => (
 					<VBlog
 						{...blog}
 						key={index}

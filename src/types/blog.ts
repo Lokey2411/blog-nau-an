@@ -1,14 +1,13 @@
 export interface PostType {
 	imageSource: string;
-	desc: string;
+	desc: string[];
 	poster: string;
 	date: string;
 	time: string;
 	title: string;
 	content: string;
 	viewer: number;
-	commenter: string | number;
-	isFavorite?: boolean;
+	favourite: number;
 }
 
 export interface BlogProps {

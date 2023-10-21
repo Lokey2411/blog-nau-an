@@ -2,7 +2,6 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./screens/Home";
 import Recipe from "./screens/Recipe";
-import Summary from "./screens/Summary";
 import Contact from "./screens/Contact";
 import Introduction from "./screens/Introduction";
 import Blog from "./screens/Blog";
@@ -22,10 +21,6 @@ export default function App() {
 				<Route
 					path="/cong-thuc"
 					element={<Recipe />}
-				/>
-				<Route
-					path="/tong-hop"
-					element={<Summary />}
 				/>
 				<Route
 					path="/lien-lac"
