@@ -45,7 +45,7 @@ export default function VBlog(props: BlogProps) {
 			className="flex justify-center border my-6 cursor-pointer"
 			onClick={toBlogHandler}
 		>
-			<div>
+			<div className="flex w-[58%]">
 				<img
 					src={props.post.imageSource}
 					alt=""
