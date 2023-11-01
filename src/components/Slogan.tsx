@@ -8,7 +8,7 @@ export default function Slogan() {
         alt="Garan Foodblog"
         className={styles.logo}
       />
-      <p className="uppercase text-3xl mt-3 text-[#035772] font-bold">
+      <p className="uppercase text-3xl mt-3 text-[#035772] font-bold font-family Arial, Helvetica, sans-serif">
         Blog nấu ăn và các công thức
       </p>
     </div>

@@ -46,7 +46,7 @@ export default function Recipe() {
               className={`text-[${textColor}] cursor-pointer`}
               onClick={() => fetchBlogs()}
             >
-              All Posts
+              Tất cả các bài
             </p>
             <p
               className={`text-[${textColor}] cursor-pointer`}

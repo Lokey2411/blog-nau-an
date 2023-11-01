@@ -65,7 +65,7 @@ export default function VBlog(props: BlogProps) {
           <p className="font-bold text-[#116dff] uppercase text-2xl my-4">
             {props.post.title}
           </p>
-          <p className="text-[12px]"> {limitedChar(props.post.content, 125)}</p>
+          <p className="text-[12px]"> {limitedChar(props.post.content, 300)}</p>
         </div>
         <div className="border-t flex flex-1 justify-between self-end items-center h-[12%]">
           <div className="flex justify-between w-2/5">
