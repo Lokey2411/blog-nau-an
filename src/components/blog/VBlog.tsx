@@ -42,10 +42,10 @@ export default function VBlog(props: BlogProps) {
 	};
 	return (
 		<div
-			className="flex justify-center border my-6 cursor-pointer"
+			className="flex justify-center border-2 border-gray-300 my-6 cursor-pointer"
 			onClick={toBlogHandler}
 		>
-			<div className="flex w-[58%]">
+			<div className="flex w-[58%] max-h-[400px]">
 				<img
 					src={props.post.imageSource}
 					alt=""
@@ -62,15 +62,15 @@ export default function VBlog(props: BlogProps) {
 						<BiDotsVerticalRounded size={32} />
 					</div>
 				</div>
-				<div className="mt-6 flex-1 border-b flex flex-col h-[75%]">
+				<div className="mt-6 flex-1 border-b flex flex-col h-[70%]">
 					<p className="text-[#116dff]">{props.post.desc.join(", ")}</p>
 					<p className="font-bold text-[#116dff] uppercase text-2xl my-4">{props.post.title}</p>
-					<p className="text-[12px]"> {limitedChar(props.post.content, 125)}</p>
+					<p className="text-base"> {limitedChar(props.post.content, 300)}</p>
 				</div>
-				<div className="border-t flex flex-1 justify-between self-end items-center h-[12%]">
-					<div className="flex justify-between w-2/5">
-						<p className="mr-1">{props.post.viewer} views</p>
-						<p>{props.post.favourite} favourites</p>
+				<div className="border-t flex flex-1 justify-between self-end items-center h-[15%] mb-4">
+					<div className="flex justify-between w-3/5 ">
+						<p className="mr-1 flex-1 ">{props.post.viewer} views</p>
+						<p className="flex-1 ">{props.post.favourite} favourites</p>
 					</div>
 					<div onClick={favoriteHandler}>
 						{isFavorite ? (

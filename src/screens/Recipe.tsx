@@ -41,22 +41,28 @@ export default function Recipe() {
 				<div className="flex justify-between mx-6 my-10">
 					<div className="flex justify-between w-1/3">
 						<p
-							className={`text-[${textColor}] cursor-pointer`}
+							className={`text-[${textColor}] underline cursor-pointer`}
 							onClick={() => fetchBlogs()}
 						>
-							All Posts
+							Tất cả các bài
 						</p>
 						<p
-							className={`text-[${textColor}] cursor-pointer`}
+							className={`text-[${textColor}] underline cursor-pointer`}
 							onClick={() => filterBlog("Mỳ")}
 						>
 							Mỳ
 						</p>
 						<p
-							className={`text-[${textColor}] cursor-pointer`}
+							className={`text-[${textColor}] underline cursor-pointer`}
 							onClick={() => filterBlog("Châu Âu")}
 						>
 							Châu Âu
+						</p>
+						<p
+							className={`text-[${textColor}] underline cursor-pointer`}
+							onClick={() => filterBlog("Đơn giản")}
+						>
+							Đơn giản
 						</p>
 					</div>
 					<div>
