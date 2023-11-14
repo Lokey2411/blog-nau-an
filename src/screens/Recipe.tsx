@@ -7,14 +7,17 @@ import { useEffect, useState } from "react";
 import { BlogProps } from "../types/blog";
 import { firestore } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
+import { removeDuplicate } from "../data/functions";
 
 export default function Recipe() {
 	const textColor = colors.primary;
 	const [blogData, setBlogData] = useState<BlogProps[]>([]);
 	const [blogFilter, setBlogFilter] = useState<BlogProps[]>([]);
+	const [catagories, setCatagories] = useState<string[]>([]);
 	// const isFocused = useIsFocused();
 	const fetchBlogs = async () => {
 		const blogPromises = blogs.map((item) => {
+			setCatagories((prevState) => [...prevState, ...item.post.desc]);
 			const docRef = doc(firestore, "blog", item.id as string);
 			return getDoc(docRef);
 		});
@@ -39,42 +42,38 @@ export default function Recipe() {
 			<HeaderNavigation active="Công thức" />
 			<div className="px-[120px] pt-20 ">
 				<div className="flex justify-between mx-6 my-10">
-					<div className="flex justify-between w-1/3">
+					<div className="flex justify-between w-full">
 						<p
-							className={`text-[${textColor}] underline cursor-pointer`}
+							className={`text-[${textColor}] underline cursor-pointer mr-2`}
 							onClick={() => fetchBlogs()}
 						>
 							Tất cả các bài
 						</p>
-						<p
-							className={`text-[${textColor}] underline cursor-pointer`}
-							onClick={() => filterBlog("Mỳ")}
-						>
-							Mỳ
-						</p>
-						<p
-							className={`text-[${textColor}] underline cursor-pointer`}
-							onClick={() => filterBlog("Châu Âu")}
-						>
-							Châu Âu
-						</p>
-						<p
-							className={`text-[${textColor}] underline cursor-pointer`}
-							onClick={() => filterBlog("Đơn giản")}
-						>
-							Đơn giản
-						</p>
+						{removeDuplicate(catagories)
+							.sort((a, b) => a.localeCompare(b))
+							.map((item: any) => {
+								return (
+									<p
+										className={`text-[${textColor}] underline cursor-pointer flex-1 mr-2`}
+										onClick={() => filterBlog(item)}
+									>
+										{item}
+									</p>
+								);
+							})}
 					</div>
 					<div>
 						<AiOutlineSearch />
 					</div>
 				</div>
-				{blogFilter.map((blog, index) => (
-					<VBlog
-						{...blog}
-						key={index}
-					/>
-				))}
+				{blogFilter.map((blog, index) => {
+					return (
+						<VBlog
+							{...blog}
+							key={index}
+						/>
+					);
+				})}
 			</div>
 		</div>
 	);
