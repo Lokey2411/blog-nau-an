@@ -1,5 +1,4 @@
 import HeaderNavigation from "../components/Header/HeaderNavigation";
-import { AiOutlineSearch } from "react-icons/ai";
 import { colors } from "../styles/colors";
 import { blogs } from "../data/blog";
 import VBlog from "../components/blog/VBlog";
@@ -42,28 +41,27 @@ export default function Recipe() {
 			<HeaderNavigation active="Công thức" />
 			<div className="px-[120px] pt-20 ">
 				<div className="flex justify-between mx-6 my-10">
-					<div className="flex justify-between w-full">
-						<p
-							className={`text-[${textColor}] underline cursor-pointer mr-2`}
-							onClick={() => fetchBlogs()}
-						>
-							Tất cả các bài
-						</p>
-						{removeDuplicate(catagories)
-							.sort((a, b) => a.localeCompare(b))
-							.map((item: any) => {
-								return (
-									<p
-										className={`text-[${textColor}] underline cursor-pointer flex-1 mr-2`}
-										onClick={() => filterBlog(item)}
-									>
-										{item}
-									</p>
-								);
-							})}
-					</div>
-					<div>
-						<AiOutlineSearch />
+					<div className="w-full flex">
+						<div className="flex justify-between w-full my-transition">
+							<p
+								className={`text-[${textColor}]  cursor-pointer `}
+								onClick={() => fetchBlogs()}
+							>
+								Tất cả các bài
+							</p>
+							{removeDuplicate(catagories)
+								.sort((a, b) => a.localeCompare(b))
+								.map((item: any) => {
+									return (
+										<p
+											className={`text-[${textColor}]  cursor-pointer flex-1 mr-2 text-center`}
+											onClick={() => filterBlog(item)}
+										>
+											{item}
+										</p>
+									);
+								})}
+						</div>
 					</div>
 				</div>
 				{blogFilter.map((blog, index) => {

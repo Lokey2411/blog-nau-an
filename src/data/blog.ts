@@ -36,15 +36,10 @@ export const blogs: BlogProps[] = [
 				steps: ["Để lửa to, đổ dầu vào chảo (chảo wok hoặc loại chảo to là hợp lí nhất) cho nóng khoảng 2 phút", "Đổ cơm đã trộn vào và đảo đều", "Khi cơm đã vàng óng, thêm các loại rau củ tùy thích", "Rang thêm khoảng 5-10 phút cho cơm giòn, cứng", "Xong, đổ cơm ra đĩa"],
 				additionalImageSource: "https://static.wixstatic.com/media/8b0b8d_b8ab4ec6ea27474dbbc5b202db66c529~mv2.jpg",
 			},
-			// {
-			//   steps: [
-			//     "Rang thêm khoảng 5-10 phút cho cơm giòn, cứng",
-			//     "Xong, đổ cơm ra đĩa"
-
-			//   ],
-			//   additionalImageSource:
-			//     "https://static.wixstatic.com/media/8b0b8d_971f402957154f42ad1c7a6ea45aa3d6~mv2.jpg",
-			// },
+			{
+				steps: ["Rang thêm khoảng 5-10 phút cho cơm giòn, cứng", "Xong, đổ cơm ra đĩa"],
+				additionalImageSource: "https://static.wixstatic.com/media/8b0b8d_971f402957154f42ad1c7a6ea45aa3d6~mv2.jpg",
+			},
 
 			{
 				title: "Xào thịt và dưa",
@@ -52,6 +47,7 @@ export const blogs: BlogProps[] = [
 				additionalImageSource: "https://static.wixstatic.com/media/8b0b8d_481b9252528149358201e6491d1a1acf~mv2.jpg",
 			},
 			{
+				title: "end",
 				steps: ["Vậy là ta đã hoàn thành món cơm rang dưa bò truyền thống của Việt Nam", "Để thưởng thức, gắp thịt và dưa từ đĩa cho vào cơm rang", "Có thể thêm dì dầu và ăn kèm cùng dưa chuột muối và nhiều loại rau củ khác", "Cơm rang dưa bò là một món phức tạp nhưng rất ngon miệng và bổ dưỡng", "Dù không phải món mà ta có thể nấu hằng ngày, nhưng nó là bữa ăn mà sẽ chắc chắn mang lại cho bạn lời khen từ người thân và gia đình."],
 				additionalImageSource: "https://static.wixstatic.com/media/8b0b8d_e9bb368301ae4ff8819b33fec4a309a3~mv2.jpg",
 			},
@@ -142,6 +138,7 @@ export const blogs: BlogProps[] = [
 				additionalImageSource: "https://static.wixstatic.com/media/8b0b8d_8ea16ff9ccba4cbd8a7dc34024227dfc~mv2.jpg",
 			},
 			{
+				title: "Thành quả",
 				steps: ["Ta được một món đơn giản, bổ dưỡng nhưng lại vô cùng thơm ngon và hấp dẫn. Món ăn này có vị ngọt thanh của mật ong, vị thơm của tỏi, vị đậm đà của thịt gà, và rất hợp khi ăn với cơm trắng"],
 				additionalImageSource: "https://static.wixstatic.com/media/8b0b8d_19f377fe63ec4eacb08a77734c106f76~mv2.jpg",
 			},

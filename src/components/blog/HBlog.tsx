@@ -43,7 +43,7 @@ export default function HBlog(props: BlogProps) {
 	};
 	return (
 		<div
-			className="w-[100%] ml-6 border h-fit pb-4 my-6 cursor-pointer"
+			className="w-[100%] ml-6 border border-[rgba(197,199,196,0.75)] h-fit pb-4 my-6 cursor-pointer"
 			onClick={toBlogHandler}
 		>
 			<img
@@ -52,7 +52,7 @@ export default function HBlog(props: BlogProps) {
 				className="w-full mb-7"
 			/>
 			<div className="mx-6  ">
-				<div className="border-b p-4">
+				<div className="border-b border-[rgba(197,199,196,0.75)] p-4">
 					<div className="flex items-center">
 						<img
 							src={props.avatarSource}
@@ -60,15 +60,18 @@ export default function HBlog(props: BlogProps) {
 							className={`mr-3 ${styles.avatar}`}
 						/>
 						<div>
-							<p>{props.post.poster}</p>
-							<ul className=" flex justify-between pr-6">
-								<li>{props.post.date}</li>
-								<li>{props.post.time}</li>
+							<div className="flex">
+								<p className="font-poppins">{props.post.poster}</p>
+								<FaCrown className="ml-1" />
+							</div>
+							<ul className=" flex justify-between items-center w-[90%] font-poppins">
+								<li className="text-sm">{props.post.date}</li>
+								<li className="w-[6px] h-[6px] bg-black rounded-full"></li>
+								<li className="text-sm">{props.post.time}</li>
 							</ul>
 						</div>
-						<FaCrown className="ml-1" />
 					</div>
-					<p className="uppercase text-3xl">{props.post.title}</p>
+					<p className="uppercase text-3xl py-2 text-[#4d8495] font-semibold">{props.post.title}</p>
 					<p className="text-[12px]">{limitedChar(props.post.content, 125)}</p>
 				</div>
 				<div className="flex justify-between mt-2">
@@ -79,7 +82,7 @@ export default function HBlog(props: BlogProps) {
 						/>
 						<Statistic
 							icon={<AiFillHeart />}
-							number={props.post.favourite}
+							number={props.post.favourite + Number(isFavorite)}
 						/>
 					</div>
 					<div
