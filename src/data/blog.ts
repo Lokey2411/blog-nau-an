@@ -81,15 +81,14 @@ export const blogs: BlogProps[] = [
         additionalImageSource:
           "https://static.wixstatic.com/media/8b0b8d_b8ab4ec6ea27474dbbc5b202db66c529~mv2.jpg",
       },
-      // {
-      //   steps: [
-      //     "Rang thêm khoảng 5-10 phút cho cơm giòn, cứng",
-      //     "Xong, đổ cơm ra đĩa"
-
-      //   ],
-      //   additionalImageSource:
-      //     "https://static.wixstatic.com/media/8b0b8d_971f402957154f42ad1c7a6ea45aa3d6~mv2.jpg",
-      // },
+      {
+        steps: [
+          "Rang thêm khoảng 5-10 phút cho cơm giòn, cứng",
+          "Xong, đổ cơm ra đĩa",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_971f402957154f42ad1c7a6ea45aa3d6~mv2.jpg",
+      },
 
       {
         title: "Xào thịt và dưa",
@@ -103,6 +102,7 @@ export const blogs: BlogProps[] = [
           "https://static.wixstatic.com/media/8b0b8d_481b9252528149358201e6491d1a1acf~mv2.jpg",
       },
       {
+        title: "end",
         steps: [
           "Vậy là ta đã hoàn thành món cơm rang dưa bò truyền thống của Việt Nam",
           "Để thưởng thức, gắp thịt và dưa từ đĩa cho vào cơm rang",
@@ -112,6 +112,93 @@ export const blogs: BlogProps[] = [
         ],
         additionalImageSource:
           "https://static.wixstatic.com/media/8b0b8d_e9bb368301ae4ff8819b33fec4a309a3~mv2.jpg",
+      },
+    ],
+  },
+
+  {
+    avatarSource:
+      "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
+    post: {
+      imageSource:
+        "https://static.wixstatic.com/media/8b0b8d_ae3fe32fa75740dfa091b9b5b978b9f8~mv2.jpg",
+      favourite: 31,
+      viewer: 106,
+      content:
+        "Bít tết là một món ăn truyền thống của ẩm thực phương Tây, được làm từ thịt bò cắt lát dày, thường là thăn ngoại, thăn vai hoặc thăn lưng. Bít tết có thể được chế biến theo nhiều cách khác nhau, nhưng phổ biến nhất là áp chảo, nướng hoặc chiên.",
+      title: "BÍT TẾT",
+      poster: "nhatminh250406",
+      date: "June 27",
+      time: "15 min",
+      desc: ["Lành mạnh", "Châu Âu"],
+    },
+    id: "post4",
+    prepare: [
+      "400g Thịt bò bít tết (Thường là các loại thăn vì chúng mềm và hợp làm bít tết nhất) ",
+      "Vài nhánh tỏi",
+      "Rau củ tùy thích: cà chua bi, dưa chuột, xà lách, măng xào, ...",
+      "30g bơ",
+      "Gia vị: muối, tiêu, bột tỏi",
+      "(Tùy chọn: Sốt bơ cao bồi",
+      "20g bơ",
+      "3 nhánh tỏi",
+      "1 củ hành tím",
+      "Mù tạt",
+      "Mùi tây",
+      "Chút chanh",
+      "Muối, tiêu, bột tỏi, hành, ớt)",
+    ],
+    preCook: [
+      "Thấm khô thịt bò",
+      "Cho gia vị, xoa cho đều lên mọi mặt của thịt rồi ướp trong khoảng 15 phút",
+      "Tỏi bóc vỏ, băm nhuyễn hành tím",
+      "Rửa sạch các loại rau củ",
+    ],
+    preCookImageSource:
+      "https://perfectforhome.com/wp-content/uploads/2021/08/opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2015__04__Anova-Steak-Guide-Sous-Vide-Photos04-seasoning-4c1d343ca18e4630b65339948744cb3b.jpg",
+    cookSteps: [
+      {
+        title: "Nấu thịt",
+        steps: [
+          "Bắc chảo lên bếp, rồi để ở nhiệt độ cao nhất có thể trong 2 phút",
+          "Cho dầu ăn rồi để dầu nóng trong thêm 2 phút.",
+          "Cho thịt bò vào chảo, áp chảo ở lửa lớn trong 2 phút mỗi mặt.",
+          "Đảo 2-4 lần để làm vỏ thịt giòn",
+          "Giảm lửa xuống vừa",
+        ],
+        additionalImageSource:
+          "https://res.cloudinary.com/hksqkdlah/image/upload/SFS_pan_seared_strip_steaks-34_1_zil1gw.jpg",
+      },
+      {
+        title: "Phết bơ và chế biến rau củ",
+        steps: [
+          "Bỏ bơ vào chảo rồi phi thơm với tỏi",
+          "Cho các loại rau củ hoặc rau mùi vào chảo",
+          "Dùng thìa phết bơ lên miếng thịt cho chín đều và đậm vị hơn",
+          "Sau 2-4 phút (Tùy theo sở thích độ tái của ban), tắt lửa và bỏ thịt ra đĩa đợi trong 15 phút",
+          "Mẹo nhỏ: Nếu bạn không có nhiệt kế thịt, bạn có thể kiểm tra độ chín của bít tết bằng cách dùng ngón tay ấn vào thịt. Nếu thịt mềm và đàn hồi, đó là bít tết medium rare. Nếu thịt cứng hơn một chút, đó là bít tết medium. Nếu thịt cứng và không đàn hồi, đó là bít tết well done.",
+        ],
+        additionalImageSource:
+          "https://jesspryles.com/wp-content/uploads/2020/08/untitled-1-scaled.jpg",
+      },
+      {
+        title: "Nấu sốt bơ cao bồi",
+        steps: [
+          "Để lửa vừa rồi cho bơ vào chảo phi cùng tỏi và hành",
+          "Tăng lửa chút và khuấy sốt đều cùng mù tạt, các gia vị, và rau củ",
+          "Để sôi, khuấy đều rồi đổ ra bát",
+        ],
+        additionalImageSource:
+          "https://www.seannaskitchen.com/wp-content/uploads/2023/05/Cowboy-Butter-Sauce.jpg",
+      },
+      {
+        steps: [
+          "Để thịt ra đĩa và trưng bày thật đẹp với các món phụ và nước sốt",
+          "Bít tết thường được ăn kèm với các loại rau củ như khoai tây chiên, khoai tay nghiền, salad, rau củ nướng, và cả cơm trắng",
+          "Đây là một món cực kì sang trảnh nhưng lại không quá phức tạp và vô cùng bổ dưỡng, ngon miệng. Nó là bữa ăn phù hợp cho những buổi liên hoan hoặc triêu đãi người thân và gia đình.",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_ae3fe32fa75740dfa091b9b5b978b9f8~mv2.jpg",
       },
     ],
   },
@@ -304,69 +391,13 @@ export const blogs: BlogProps[] = [
         additionalImageSource:
           "https://www.seannaskitchen.com/wp-content/uploads/2023/05/Cowboy-Butter-Sauce.jpg",
       },
-      {
-        steps: [
-          "Để thịt ra đĩa và trưng bày thật đẹp với các món phụ và nước sốt",
-
-          "Bít tết thường được ăn kèm với các loại rau củ như khoai tây chiên, khoai tay nghiền, salad, rau củ nướng, và cả cơm trắng",
-          "Đây là một món cực kì sang trảnh nhưng lại không quá phức tạp và vô cùng bổ dưỡng, ngon miệng. Nó là bữa ăn phù hợp cho những buổi liên hoan hoặc triêu đãi người thân và gia đình.",
-        ],
-        additionalImageSource:
-          "https://static.wixstatic.com/media/8b0b8d_ae3fe32fa75740dfa091b9b5b978b9f8~mv2.jpg",
-      },
-    ],
-  },
-
-  {
-    avatarSource:
-      "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
-    post: {
-      imageSource:
-        "https://static.wixstatic.com/media/8b0b8d_19f377fe63ec4eacb08a77734c106f76~mv2.jpg",
-      favourite: 26,
-      viewer: 97,
-      content:
-        "Gà sốt mật ong bơ tỏi là một món ăn đơn giản nhưng lại vô cùng ngon miệng và bổ dưỡng. Thịt ức gà mềm ngọt, thấm đều gia vị tỏi và mật ong thơm lừng, ăn cùng cơm trắng rất hợp. Món ăn này cũng rất thích hợp cho những ngày bận rộn, chỉ cần vài bước đơn giản là bạn đã có ngay một món ăn ngon miệng và healthy cho cả gia đình.",
-      title: "GÀ SỐT MẬT ONG BƠ TỎI",
-      poster: "nhatminh250406",
-      date: "July 14",
-      time: "12 min",
-      desc: ["Cơm", "Lành mạnh", "Đơn giản"],
-    },
-    id: "post3",
-    prepare: [
-      "400g ức gà",
-      "4 nhánh tỏi",
-      "hành lá",
-      "2 thìa mật ong",
-      "20g bơ",
-      "1 thìa xì dầu",
-      "1/2 thìa giấm",
-      "Gia vị: muối, tiêu, bột tỏi, bột hành, bột ớt paprika, bột ớt xay",
-    ],
-    preCook: [
-      "Ức gà rửa sạch, thấm khô, thái miếng cho cùng độ dày khoảng 2-3 cm",
-      "Ướp gà 30 phút bằng các gia vị",
-      "Tỏi bóc vỏ, băm nhỏ.",
-    ],
-    preCookImageSource:
-      "https://static.wixstatic.com/media/8b0b8d_625d9e767d9b4d059052039d92533d14~mv2.jpg",
-    cookSteps: [
-      {
-        title: "Nấu gà",
-        steps: [
-          "Cho một ít dầu ăn vào chảo, đun nóng. Cho ức gà vào xào ở lửa lớn trong khoảng 4.",
-          "Xào cho đến khi thịt gà đổi nâu thì giảm lửa nhỏ và tiếp tục xào thêm khoảng 6 phút cho thịt gà chín đều và mềm.",
-          "Xong, bỏ gà ra đĩa để nguội",
-        ],
-        additionalImageSource:
-          "https://static.wixstatic.com/media/8b0b8d_7a42659695034c739cad01d621eebec5~mv2.png",
-      },
       // {
+      //   steps: [
+      //     // "Để thịt ra đĩa và trưng bày thật đẹp với các món phụ và nước sốt",
 
-      //   additionalImageSource:
-      //     "https://static.wixstatic.com/media/8b0b8d_06a912b59e8343578916a320b23474f9~mv2.jpg",
-      // },
+      // //   additionalImageSource:
+      // //     "https://static.wixstatic.com/media/8b0b8d_06a912b59e8343578916a320b23474f9~mv2.jpg",
+      // // },
       {
         title: "Phi tỏi",
         steps: ["Phi thơm tỏi với bơ với lửa vừa khoảng 3 phút"],
@@ -393,6 +424,7 @@ export const blogs: BlogProps[] = [
           "https://static.wixstatic.com/media/8b0b8d_8ea16ff9ccba4cbd8a7dc34024227dfc~mv2.jpg",
       },
       {
+        title: "Thành quả",
         steps: [
           "Ta được một món đơn giản, bổ dưỡng nhưng lại vô cùng thơm ngon và hấp dẫn. Món ăn này có vị ngọt thanh của mật ong, vị thơm của tỏi, vị đậm đà của thịt gà, và rất hợp khi ăn với cơm trắng",
         ],
