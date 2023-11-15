@@ -25,15 +25,16 @@ const Blog = () => {
 								alt=""
 								className={`mr-3 ${styles.avatar}`}
 							/>
-							<div className="flex justify-between  font-poppins">
+							<div className="flex justify-between  font-poppins items-center">
 								<p>{blog?.post.poster}</p>
-								<FaCrown className="ml-1" />
+								<FaCrown className="mr-4 ml-1 mb-1" />
 								<div className="mr-2">{blog?.post.date}</div>
+								<div className="w-[6px] h-[6px] bg-black rounded-full mr-2"></div>
 								<div>{blog?.post.time}</div>
 							</div>
 						</div>
 					</div>
-					<p className="font-bold text-[#116dff] uppercase text-2xl my-4 ">{blog?.post.title}</p>
+					<p className="font-bold text-[#4d8495] uppercase text-2xl my-4 ">{blog?.post.title}</p>
 					<img
 						src={blog?.post.imageSource}
 						alt=""
