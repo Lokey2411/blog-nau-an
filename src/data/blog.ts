@@ -121,6 +121,119 @@ export const blogs: BlogProps[] = [
       "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
     post: {
       imageSource:
+        "https://static.wixstatic.com/media/8b0b8d_e9bb368301ae4ff8819b33fec4a309a3~mv2.jpg",
+      favourite: 37,
+      viewer: 113,
+      content:
+        "Cơm rang dưa bò là một món ăn quen thuộc trong ẩm thực Việt Nam và nhiều nước châu Á. Đây là một món ăn được nhiều người yêu thích vì sự kết hợp hoàn hảo của các hương vị: sự mềm và đậm đà của thịt bò, vị chua ngọt của dưa cải và vị giòn của cơm rang trứng. Bình thường, cơm rang dưa bò hay được làm trong nhà hàng vì độ khó và yêu cầu có thiết bị nấu riêng, nhưng bạn hoàn toàn có thể thử sức chế biến đặc sản Việt này mà thỏa thích sáng tạo để phù hợp với sở thích của mình",
+      title: "CƠM RANG DƯA BÒ",
+      poster: "nhatminh250406",
+      date: "July 15",
+      time: "25 min",
+      desc: ["Cơm", "Việt"],
+    },
+    id: "post5",
+    prepare: [
+      "300g thịt bò ",
+      "400g cơm nguội (để qua đêm trong tủ lạnh tối thiểu 1 ngày)",
+      "2 quả trứng",
+      "200g dưa cải chua",
+      "4 nhánh tỏi",
+      "1 củ hành tím",
+      "Hành lá",
+      "100g dưa chuột muối",
+      "Gia vị: hạt nêm, tiêu đen, bột tỏi, bột hành, xì dầu, dầu hàu, đường",
+      "(Tùy chọn: các loại rau củ khác như cà rốt, ngô, đậu Hà Lan,...)",
+    ],
+    preCook: [
+      "Thái thịt mỏng",
+      "Tỏi, hành bóc vỏ, băm nhỏ",
+      "Rửa sạch các loại rau củ",
+      "Cắt lát nhỏ dưa chuột muối",
+    ],
+    preCookImageSource:
+      "https://vhkt.net/upload/images/mon-an-ngon/com-rang-dua-bo-1.jpg",
+    cookSteps: [
+      {
+        title: "Ướp thịt",
+        steps: [
+          "Cho thịt vào bát cùng với gia vị ướp:",
+          "1 thìa hạt nêm",
+          "1 thìa xì dầu",
+          "1 thìa dàu hàu",
+          "1/3 thìa đường",
+          "1/3 thìa bột tỏi",
+          "1/3 thìa bột hành",
+          "1/3 thìa tiêu đen",
+          "Ướp khoảng 15 phút",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_f1c6bda4b1a34527a3cbe4307fdcc3d3~mv2.jpg",
+      },
+      {
+        title: "Trộn cơm",
+        steps: [
+          "Bỏ cơm nguội ra 1 bát tô trộn đều với:",
+          "2 quả trứng",
+          "1 thìa dầu hàu",
+          "1/2 thìa hạt nêm",
+          "1 thìa xì dầu",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_a485cb69f20e4038add5c46888548aa1~mv2.jpg",
+      },
+      {
+        title: "Rang cơm",
+        steps: [
+          "Để lửa to, đổ dầu vào chảo (chảo wok hoặc loại chảo to là hợp lí nhất) cho nóng khoảng 2 phút",
+          "Đổ cơm đã trộn vào và đảo đều",
+          "Khi cơm đã vàng óng, thêm các loại rau củ tùy thích",
+          "Rang thêm khoảng 5-10 phút cho cơm giòn, cứng",
+          "Xong, đổ cơm ra đĩa",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_b8ab4ec6ea27474dbbc5b202db66c529~mv2.jpg",
+      },
+      // {
+      //   steps: [
+      //     "Rang thêm khoảng 5-10 phút cho cơm giòn, cứng",
+      //     "Xong, đổ cơm ra đĩa"
+
+      //   ],
+      //   additionalImageSource:
+      //     "https://static.wixstatic.com/media/8b0b8d_971f402957154f42ad1c7a6ea45aa3d6~mv2.jpg",
+      // },
+
+      {
+        title: "Xào thịt và dưa",
+        steps: [
+          "Bật lửa to và phi tỏi và hành đến khi thơm",
+          "Bỏ thịt bò vào, đảo nhiều và liên tục để thịt chín đều trong 3-4 phút",
+          "Giảm lửa xuống vừa rồi đổ dưa chua vào, tiếp tục đảo để trộn với thịt trong 2-3 phút",
+          "Nếm và tủy chỉnh gia vị cho phù hợp rồi đổ ra đĩa to",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_481b9252528149358201e6491d1a1acf~mv2.jpg",
+      },
+      {
+        steps: [
+          "Vậy là ta đã hoàn thành món cơm rang dưa bò truyền thống của Việt Nam",
+          "Để thưởng thức, gắp thịt và dưa từ đĩa cho vào cơm rang",
+          "Có thể thêm dì dầu và ăn kèm cùng dưa chuột muối và nhiều loại rau củ khác",
+          "Cơm rang dưa bò là một món phức tạp nhưng rất ngon miệng và bổ dưỡng",
+          "Dù không phải món mà ta có thể nấu hằng ngày, nhưng nó là bữa ăn mà sẽ chắc chắn mang lại cho bạn lời khen từ người thân và gia đình.",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_e9bb368301ae4ff8819b33fec4a309a3~mv2.jpg",
+      },
+    ],
+  },
+
+  {
+    avatarSource:
+      "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
+    post: {
+      imageSource:
         "https://static.wixstatic.com/media/8b0b8d_ae3fe32fa75740dfa091b9b5b978b9f8~mv2.jpg",
       favourite: 31,
       viewer: 106,
