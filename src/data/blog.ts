@@ -3,6 +3,417 @@ import { BlogProps } from "../types/blog";
 import { firestore } from "../firebase";
 
 export const blogs: BlogProps[] = [
+  // Phở
+  {
+    avatarSource:
+      "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
+    post: {
+      imageSource:
+        "https://static.wixstatic.com/media/8b0b8d_64d59578cd334ae09e70ea6034ae463a~mv2.jpg",
+      favourite: 35,
+      viewer: 131,
+      content:
+        "Phở là một món ăn truyền thống của Việt Nam, được coi là món ăn quốc hồn quốc túy của đất nước. Cách làm phở rất đơn giản, nhưng để có một tô phở ngon đòi hỏi người nấu phải có kinh nghiệm và sự khéo léo. Hôm nay tôi sẽ chia sẽ cho các bạn công thức làm món phở miền Bắc truyền thống của gia đình tôi. Bạn có thể tham khảo cách nấu qua video youtube của tôi: https://youtu.be/AVMG28xx42s?si=QhHo-QyCLGkubk8J",
+      title: "PHỞ",
+      poster: "nhatminh250406",
+      date: "Sep 2",
+      time: "4 hour",
+      desc: ["Việt", "Lành mạnh"],
+    },
+    id: "post8",
+    prepare: [
+      "300g thịt bò",
+      "400g bánh phở tươi (Mua ở chợ)",
+      "Xương bò ống",
+      "Hành lá",
+      "Vài quả ớt tươi",
+      "Chanh",
+      "Gia vị nấu nước dùng:",
+      "Hạt nêm",
+      "Nước mắm",
+      "3 Củ hành tím",
+      "Hành hoa",
+      "2 Củ Gừng",
+      "Hồi quế",
+      "Thảo quả",
+      "Hạt Tiêu",
+      "Hạt Ngò",
+      "Đinh hương",
+    ],
+    preCook: [
+      "Rửa sạch thịt",
+      "Rửa sạch các loại rau củ",
+      "Cắt chanh",
+      "Sắp xếp gọn các nguyên liệu",
+    ],
+    preCookImageSource:
+      "https://static.wixstatic.com/media/8b0b8d_4bcffd1df3914c9b860798cc8e263540~mv2.jpg",
+    cookSteps: [
+      {
+        title: "Thái Thịt",
+        steps: ["Thái thịt thật mỏng"],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_287f9ade5eb44f22bf5217c99024680f~mv2.png",
+      },
+      {
+        title: "Cắt rau củ",
+        steps: [
+          "Bóc vỏ rồi bổ đôi hành tím và gừng",
+          "Cắt nhỏ hành hoa và hành lá",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_024e5468d1d84c21bd0d70e2c036a38a~mv2.jpg",
+      },
+      {
+        title: "Nướng gia vị",
+        steps: [
+          "Cho hồi quế, thảo quả, hạt tiêu, hạt ngò, đinh hương vào chảo và nướng trên lửa nóng",
+          "Tắt bếp khi mùi hương bốc lên ",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_b553aa9f5a4f47329e12d24370387c20~mv2.jpg",
+      },
+      {
+        title: "Nướng các rau củ",
+        steps: [
+          "Nướng hành tím và gừng trên chảo hoặc ngay trên lửa",
+          "Dừng khi chúng xuất hiện các phần cháy",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_dc558ee3f7a145c2bf22d9ea7bfed681~mv2.png",
+      },
+      {
+        title: "Làm nước Phở",
+        steps: [
+          "Đổ nước vào 3/5 nồi to ~ 2 lít",
+          "Bỏ sương ống vào và đun sôi để ninh sương",
+          "Đổ hành tím, gừng và các gia vị đã nướng vào",
+          "Sau mỗi 3 phút, vớt các váng bọt từ sương nổi lên trên nồi",
+          "Khi nước đã trong, thêm 3 thìa hạt nêm, 3 thìa nước mắm, và 1 thìa đường (có thểm thêm 1 thìa bột ngọt)",
+          "Khuấy đều rồi hầm trong tối thiểu 2-4 tiếng",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_aade43de36ea46bc9a74e242e0f84646~mv2.jpg",
+      },
+      {
+        title: "Trụng bánh phở",
+        steps: [
+          "Cho phở vào trụng trong nước dùng",
+          "Sau ~5 giây, nhấc phở ra và xóc ráo nước",
+          "Đổ phở ra bát tô",
+          "(Nếu thích ăn bò chính có thể trụng cả thịt bò ở bước này",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_fe16e085431b4ed2a8871fdf3f95ec9a~mv2.jpg",
+      },
+      {
+        title: "Trưng bày",
+        steps: ["Bỏ thịt bò sống vào bát", "Trang trí với hành hoa và hành lá"],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_3bef321299ff44d68cb188f84e5eade0~mv2.jpg",
+      },
+      {
+        steps: ["Đổ nước Phở sôi vào bát để nấu thịt bò"],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_1c88bdea98c04a6088b8ae76b6a38e2a~mv2.jpg",
+      },
+      {
+        title: "end",
+        steps: [
+          "Vậy là ta đã hoàn thành món Phở truyền thống của miền Bắc",
+          "Tùy theo khẩu vị mỗi người có thểm cho thêm tiêu, chanh; ớt tươi hoặc ớt tương; hành, tỏi dấm;...",
+          "Phở có thể được ăn vào bất cứ thời điểm nào trong ngày, nhưng phổ biến nhất là bữa sáng. (Khi nấu nên cân nhắc thời gian làm nước rất dài để có một bữa ăn phù hợp).",
+          "Phở là món ăn giàu dinh dưỡng, có tác dụng bồi bổ cơ thể. Nó đã trở thành món ăn mang tính biểu tượng của Việt Nam và luôn được nhiều người Việt Nam yêu thích và tự hào giới thiệu với bạn bè quốc tế.",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_64d59578cd334ae09e70ea6034ae463a~mv2.jpg",
+      },
+    ],
+  },
+
+  //Gà rán
+  {
+    avatarSource:
+      "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
+    post: {
+      imageSource:
+        "https://static.wixstatic.com/media/8b0b8d_85c3588d882249eca586066c177d72e5~mv2.jpg",
+      favourite: 22,
+      viewer: 88,
+      content:
+        "Tôi sẽ không thể nào có một website tên là Garan Food Blog nếu không chia sẻ công thức nấu gà rán đúng không. Vậy hôm nay ta sẽ làm món ăn phổ biến và được yêu chuộng trên toàn thế giới này. Gà rán có nguồn gốc từ Scotland, được cho là ra đời vào thế kỷ 17. Món ăn này ban đầu được chế biến từ gà nguyên con, nhưng sau đó được thay thế bằng các miếng gà nhỏ hơn để dễ dàng chế biến và thưởng thức. Nó mang hương vị thơm ngon, giòn rụm, kết hợp với các loại nước sốt đậm đà tạo nên một món ăn hấp dẫn, khó cưỡng. ",
+      title: "GÀ RÁN",
+      poster: "nhatminh250406",
+      date: "Aug 19",
+      time: "30 min",
+      desc: ["Tây", "Phức tạp"],
+    },
+    id: "post7",
+    prepare: [
+      "400g thịt gà đùi/ức",
+      "~400ml Sữa tươi không đường",
+      "Tương ớt",
+      "~200g Bột mì",
+      "~75g Tinh bột ngô",
+      "Hành lá",
+      "Gia vị: muối, tiêu, bột hành, bột tỏi, bột ớt paprika, bột ớt cayenne",
+      "Sốt gà: 1 thìa tương cà, mayonnaise, mù tạt vàng",
+      "(Tùy chọn: các loại rau ăn kèm như dưa chuột, rau xà lách,...)",
+    ],
+    preCook: [
+      "Thái thịt gà to khoảng bàn tay",
+      "Ướp gà QUA ĐÊM trong:",
+      "~400ml Sữa",
+      "2 thìa tương ớt",
+      "2 thìa muối",
+      "1/2 thìa bột hành, bột tỏi, bột ớt paprika, bột ớt cayenne",
+      "(Cắt lát dưa chuột)",
+    ],
+    preCookImageSource:
+      "https://static.wixstatic.com/media/8b0b8d_9b68f165ceb8474480e295a92f739b3a~mv2.jpg",
+    cookSteps: [
+      {
+        title: "Làm bột tẩm gà",
+        steps: [
+          "Trộn đều:",
+          "~200g Bột mì",
+          "~75g Tinh bột ngô",
+          "2 thìa muối",
+          "1/2 thìa tiêu, bột hành, bột tỏi, bột ớt paprika, bột ớt cayenne",
+          "1/4 thìa bột nở (baking powder)",
+          "2 thìa nước ướp gà",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_d95c53f352b94ef0980d77c89bb5f3b8~mv2.jpg",
+      },
+      {
+        title: "Tẩm bột",
+        steps: [
+          "Cho gà vào bột rồi ấn mạnh để bột dính lên",
+          "Tẩm đều, không để thừa phần nào chưa bị phủ bởi bột",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_5de0f05b6ee6464ab0a3950c253c9493~mv2.jpg",
+      },
+      {
+        steps: [
+          "Nếu sau khi tẩm xong còn thừa bột, có thể nhúng lại vào nước ướp rồi thẩm thêm lần nữa cho gà giòn hơn",
+          "Bỏ thịt gà ra đĩa",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_b3a93f9acfc641978ea07b8eecb7e294~mv2.jpg",
+      },
+      {
+        title: "Rán gà",
+        steps: [
+          "Đổ dầu cho đến 3 cm hoặc đủ để chìm miếng gà",
+          "Để lửa vừa-cao sao cho dầu nóng ~ 163°C",
+          "Bỏ 1-2 miếng gà vào và rán",
+          "Lật sau mỗi 1p để gà chín đều và không cháy",
+          "Sau 8-12 phút tùy vào độ dày hoặc khi miếng gà đạt 165°C",
+          "Để gà ra đĩa với giấy thấm dầu hoặc giá để dầu chảy ra, giữ cho gà gión hơn sau khi đã nguội",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_1b36bc37d6c04607b5e9ab2df53fe3ce~mv2.jpg",
+      },
+      {
+        title: "Làm nước sốt",
+        steps: [
+          "Trong một bát con, trộn đều:",
+          "2 thìa tương cà",
+          "2 thìa mayonnaise",
+          "1 thìa mù tạt vàng",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_4f409181125640a381eca140114575b6~mv2.jpg",
+      },
+      {
+        title: "end",
+        steps: [
+          "Trang trí đĩa gà và với rau củ (dưa chuột) và một chút hành lá cắt nhỏ và thế là ta đã được một suất ăn như KFC",
+          "Bạn có thể ăn không, nhưng mình khuyên bạn ăn cùng với cơm trắng",
+          "Gà rán là món ăn ngon miệng, dễ ăn, và phù hợp với mọi khẩu vị. Đây là món ăn được nhiều người lựa chọn để thưởng thức trong những dịp đặc biệt hoặc đơn giản là những bữa ăn hàng ngày.",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_85c3588d882249eca586066c177d72e5~mv2.jpg",
+      },
+    ],
+  },
+
+  //Indomie
+  {
+    avatarSource:
+      "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
+    post: {
+      imageSource:
+        "https://static.wixstatic.com/media/8b0b8d_ea5969e4d2c444648096eeaf13da00d2~mv2.jpg",
+      favourite: 25,
+      viewer: 98,
+      content:
+        "Mì trộn Indomie là một món ăn nổi tiếng của Indonesia. Món ăn này được chế biến từ mì gói Indomie và có hương vị đậm đà, thơm ngon, kết hợp với các gia vị tươi ngon tạo nên một món ăn hấp dẫn, đơn giản, và phù hợp với mọi khẩu vị.",
+      title: "MÌ TRỘN INDOMIE",
+      poster: "nhatminh250406",
+      date: "July 29",
+      time: "13 min",
+      desc: ["Mỳ", "Đơn giản"],
+    },
+    id: "post6",
+    prepare: [
+      "300g thịt bò ",
+      "2 gói mì Indomie (Vị tùy chọn)",
+      "Hành lá",
+      "2 nhánh tỏi",
+      "Gia vị: các gói gia vị mì, bột hành, bột tỏi, bột ớt, tiêu, xì dầu, dầu hàu",
+      "(Tùy chọn: các loại rau củ như cà rốt cắt nhỏ, ngô, đậu Hà Lan,...)",
+    ],
+    preCook: [
+      "Thái thịt mỏng",
+      "Ướp thịt với:",
+      "1/2 thìa bột tỏi, hành, ớt, tiêu",
+      "1 thìa dầu hàu và xì dầu",
+      "Bóc vỏ và băm nhỏ tỏi",
+      "Rửa sạch các loại rau củ",
+      "Cắt hành lá",
+    ],
+    preCookImageSource:
+      "https://static.wixstatic.com/media/8b0b8d_287a9c0f6c424a6cbf705982e291d0e9~mv2.jpg",
+    cookSteps: [
+      {
+        title: "Xào thịt",
+        steps: [
+          "Đổ chút dầu ăn vào và phi thơm tỏi",
+          "Xào thịt trong lửa vừa-cao trong 7 phút",
+          "Đảo thường xuyên để thịt chín đều",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_4de1e65af372494ab40b160039144e0b~mv2.jpg",
+      },
+      {
+        title: "Luộc mì",
+        steps: [
+          "Cho 500 ml nước vào và đun sôi trong nồi",
+          "Khi sôi, bỏ mì vào và luộc trong 1p30",
+          "(Có thể cùng bước này bỏ các loại rau củ vào để nấu cùng mì",
+          "Xong, chắt nước",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_56333556a3784254b315ce6a94efa531~mv2.jpg",
+      },
+      {
+        title: "Trộn mì",
+        steps: [
+          "Đổ hết gói gia vị Indomie vào (Có thể chỉ đổ 1/2 gói muối thứ 2 nếu không muốn mì quá mặn)",
+          "1/4 thìa bột tỏi và bột hành",
+          "1/2 thìa xì dầu",
+          "Trộn đều mì lên",
+          "Bỏ thịt bò vào và trộn đều cùng",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_62aaa50701524298bd1d84e7dd1182ca~mv2.jpg",
+      },
+
+      {
+        title: "end",
+        steps: [
+          "Đổ mì ra bát tô và trang trí với chút hành lá",
+          "Mì trộn Indomie là một món ăn đơn giản, dễ làm nhưng lại vô cùng thơm ngon. Đây là món ăn phù hợp cho những bữa ăn nhanh gọn cho những ngày bận rộn hoặc những bữa ăn nhẹ.",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_ea5969e4d2c444648096eeaf13da00d2~mv2.jpg",
+      },
+    ],
+  },
+
+  //Bít tết
+  {
+    avatarSource:
+      "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
+    post: {
+      imageSource:
+        "https://static.wixstatic.com/media/8b0b8d_ae3fe32fa75740dfa091b9b5b978b9f8~mv2.jpg",
+      favourite: 31,
+      viewer: 106,
+      content:
+        "Bít tết là một món ăn truyền thống của ẩm thực phương Tây, được làm từ thịt bò cắt lát dày, thường là thăn ngoại, thăn vai hoặc thăn lưng. Bít tết có thể được chế biến theo nhiều cách khác nhau, nhưng phổ biến nhất là áp chảo, nướng hoặc chiên.",
+      title: "BÍT TẾT",
+      poster: "nhatminh250406",
+      date: "July 14",
+      time: "15 min",
+      desc: ["Lành mạnh", "Tây"],
+    },
+    id: "post4",
+    prepare: [
+      "400g Thịt bò bít tết (Thường là các loại thăn vì chúng mềm và hợp làm bít tết nhất) ",
+      "Vài nhánh tỏi",
+      "Rau củ tùy thích: cà chua bi, dưa chuột, xà lách, măng xào, ...",
+      "30g bơ",
+      "Gia vị: muối, tiêu, bột tỏi",
+      "(Tùy chọn: Sốt bơ cao bồi",
+      "20g bơ",
+      "3 nhánh tỏi",
+      "1 củ hành tím",
+      "Mù tạt",
+      "Mùi tây",
+      "Chút chanh",
+      "Muối, tiêu, bột tỏi, hành, ớt)",
+    ],
+    preCook: [
+      "Thấm khô thịt bò",
+      "Cho gia vị, xoa cho đều lên mọi mặt của thịt rồi ướp trong khoảng 15 phút",
+      "Tỏi bóc vỏ, băm nhuyễn hành tím",
+      "Rửa sạch các loại rau củ",
+    ],
+    preCookImageSource:
+      "https://perfectforhome.com/wp-content/uploads/2021/08/opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2015__04__Anova-Steak-Guide-Sous-Vide-Photos04-seasoning-4c1d343ca18e4630b65339948744cb3b.jpg",
+    cookSteps: [
+      {
+        title: "Nấu thịt",
+        steps: [
+          "Bắc chảo lên bếp, rồi để ở nhiệt độ cao nhất có thể trong 2 phút",
+          "Cho dầu ăn rồi để dầu nóng trong thêm 2 phút.",
+          "Cho thịt bò vào chảo, áp chảo ở lửa lớn trong 2 phút mỗi mặt.",
+          "Đảo 2-4 lần để làm vỏ thịt giòn",
+          "Giảm lửa xuống vừa",
+        ],
+        additionalImageSource:
+          "https://res.cloudinary.com/hksqkdlah/image/upload/SFS_pan_seared_strip_steaks-34_1_zil1gw.jpg",
+      },
+      {
+        title: "Phết bơ và chế biến rau củ",
+        steps: [
+          "Bỏ bơ vào chảo rồi phi thơm với tỏi",
+          "Cho các loại rau củ hoặc rau mùi vào chảo",
+          "Dùng thìa phết bơ lên miếng thịt cho chín đều và đậm vị hơn",
+          "Sau 2-4 phút (Tùy theo sở thích độ tái của ban), tắt lửa và bỏ thịt ra đĩa đợi trong 15 phút",
+          "Mẹo nhỏ: Nếu bạn không có nhiệt kế thịt, bạn có thể kiểm tra độ chín của bít tết bằng cách dùng ngón tay ấn vào thịt. Nếu thịt mềm và đàn hồi, đó là bít tết medium rare. Nếu thịt cứng hơn một chút, đó là bít tết medium. Nếu thịt cứng và không đàn hồi, đó là bít tết well done.",
+        ],
+        additionalImageSource:
+          "https://jesspryles.com/wp-content/uploads/2020/08/untitled-1-scaled.jpg",
+      },
+      {
+        title: "Nấu sốt bơ cao bồi",
+        steps: [
+          "Để lửa vừa rồi cho bơ vào chảo phi cùng tỏi và hành",
+          "Tăng lửa chút và khuấy sốt đều cùng mù tạt, các gia vị, và rau củ",
+          "Để sôi, khuấy đều rồi đổ ra bát",
+        ],
+        additionalImageSource:
+          "https://www.seannaskitchen.com/wp-content/uploads/2023/05/Cowboy-Butter-Sauce.jpg",
+      },
+      {
+        title: "end",
+        steps: [
+          "Để thịt ra đĩa và trưng bày thật đẹp với các món phụ và nước sốt",
+          "Bít tết thường được ăn kèm với các loại rau củ như khoai tây chiên, khoai tay nghiền, salad, rau củ nướng, và cả cơm trắng",
+          "Đây là một món cực kì sang trảnh nhưng lại không quá phức tạp và vô cùng bổ dưỡng, ngon miệng. Nó là bữa ăn phù hợp cho những buổi liên hoan hoặc triêu đãi người thân và gia đình.",
+        ],
+        additionalImageSource:
+          "https://static.wixstatic.com/media/8b0b8d_ae3fe32fa75740dfa091b9b5b978b9f8~mv2.jpg",
+      },
+    ],
+  },
+
+  //Cơm rang
   {
     avatarSource:
       "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
@@ -15,9 +426,9 @@ export const blogs: BlogProps[] = [
         "Cơm rang dưa bò là một món ăn quen thuộc trong ẩm thực Việt Nam và nhiều nước châu Á. Đây là một món ăn được nhiều người yêu thích vì sự kết hợp hoàn hảo của các hương vị: sự mềm và đậm đà của thịt bò, vị chua ngọt của dưa cải và vị giòn của cơm rang trứng. Bình thường, cơm rang dưa bò hay được làm trong nhà hàng vì độ khó và yêu cầu có thiết bị nấu riêng, nhưng bạn hoàn toàn có thể thử sức chế biến đặc sản Việt này mà thỏa thích sáng tạo để phù hợp với sở thích của mình",
       title: "CƠM RANG DƯA BÒ",
       poster: "nhatminh250406",
-      date: "July 15",
+      date: "June 30",
       time: "25 min",
-      desc: ["Cơm", "Việt"],
+      desc: ["Cơm", "Việt", "Phức tạp"],
     },
     id: "post5",
     prepare: [
@@ -75,8 +486,6 @@ export const blogs: BlogProps[] = [
           "Để lửa to, đổ dầu vào chảo (chảo wok hoặc loại chảo to là hợp lí nhất) cho nóng khoảng 2 phút",
           "Đổ cơm đã trộn vào và đảo đều",
           "Khi cơm đã vàng óng, thêm các loại rau củ tùy thích",
-          "Rang thêm khoảng 5-10 phút cho cơm giòn, cứng",
-          "Xong, đổ cơm ra đĩa",
         ],
         additionalImageSource:
           "https://static.wixstatic.com/media/8b0b8d_b8ab4ec6ea27474dbbc5b202db66c529~mv2.jpg",
@@ -116,288 +525,57 @@ export const blogs: BlogProps[] = [
     ],
   },
 
+  //Gà mật ong
   {
     avatarSource:
       "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
     post: {
       imageSource:
-        "https://static.wixstatic.com/media/8b0b8d_ae3fe32fa75740dfa091b9b5b978b9f8~mv2.jpg",
-      favourite: 31,
-      viewer: 106,
+        "https://static.wixstatic.com/media/8b0b8d_19f377fe63ec4eacb08a77734c106f76~mv2.jpg",
+      favourite: 26,
+      viewer: 97,
       content:
-        "Bít tết là một món ăn truyền thống của ẩm thực phương Tây, được làm từ thịt bò cắt lát dày, thường là thăn ngoại, thăn vai hoặc thăn lưng. Bít tết có thể được chế biến theo nhiều cách khác nhau, nhưng phổ biến nhất là áp chảo, nướng hoặc chiên.",
-      title: "BÍT TẾT",
+        "Gà sốt mật ong bơ tỏi là một món ăn đơn giản nhưng lại vô cùng ngon miệng và bổ dưỡng. Thịt ức gà mềm ngọt, thấm đều gia vị tỏi và mật ong thơm lừng, ăn cùng cơm trắng rất hợp. Món ăn này cũng rất thích hợp cho những ngày bận rộn, chỉ cần vài bước đơn giản là bạn đã có ngay một món ăn ngon miệng và healthy cho cả gia đình.",
+      title: "GÀ SỐT MẬT ONG BƠ TỎI",
       poster: "nhatminh250406",
-      date: "June 27",
-      time: "15 min",
-      desc: ["Lành mạnh", "Châu Âu"],
+      date: "June 6",
+      time: "12 min",
+      desc: ["Cơm", "Lành mạnh", "Đơn giản", "Tây"],
     },
-    id: "post4",
+    id: "post3",
     prepare: [
-      "400g Thịt bò bít tết (Thường là các loại thăn vì chúng mềm và hợp làm bít tết nhất) ",
-      "Vài nhánh tỏi",
-      "Rau củ tùy thích: cà chua bi, dưa chuột, xà lách, măng xào, ...",
-      "30g bơ",
-      "Gia vị: muối, tiêu, bột tỏi",
-      "(Tùy chọn: Sốt bơ cao bồi",
-      "20g bơ",
-      "3 nhánh tỏi",
-      "1 củ hành tím",
-      "Mù tạt",
-      "Mùi tây",
-      "Chút chanh",
-      "Muối, tiêu, bột tỏi, hành, ớt)",
-    ],
-    preCook: [
-      "Thấm khô thịt bò",
-      "Cho gia vị, xoa cho đều lên mọi mặt của thịt rồi ướp trong khoảng 15 phút",
-      "Tỏi bóc vỏ, băm nhuyễn hành tím",
-      "Rửa sạch các loại rau củ",
-    ],
-    preCookImageSource:
-      "https://perfectforhome.com/wp-content/uploads/2021/08/opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2015__04__Anova-Steak-Guide-Sous-Vide-Photos04-seasoning-4c1d343ca18e4630b65339948744cb3b.jpg",
-    cookSteps: [
-      {
-        title: "Nấu thịt",
-        steps: [
-          "Bắc chảo lên bếp, rồi để ở nhiệt độ cao nhất có thể trong 2 phút",
-          "Cho dầu ăn rồi để dầu nóng trong thêm 2 phút.",
-          "Cho thịt bò vào chảo, áp chảo ở lửa lớn trong 2 phút mỗi mặt.",
-          "Đảo 2-4 lần để làm vỏ thịt giòn",
-          "Giảm lửa xuống vừa",
-        ],
-        additionalImageSource:
-          "https://res.cloudinary.com/hksqkdlah/image/upload/SFS_pan_seared_strip_steaks-34_1_zil1gw.jpg",
-      },
-      {
-        title: "Phết bơ và chế biến rau củ",
-        steps: [
-          "Bỏ bơ vào chảo rồi phi thơm với tỏi",
-          "Cho các loại rau củ hoặc rau mùi vào chảo",
-          "Dùng thìa phết bơ lên miếng thịt cho chín đều và đậm vị hơn",
-          "Sau 2-4 phút (Tùy theo sở thích độ tái của ban), tắt lửa và bỏ thịt ra đĩa đợi trong 15 phút",
-          "Mẹo nhỏ: Nếu bạn không có nhiệt kế thịt, bạn có thể kiểm tra độ chín của bít tết bằng cách dùng ngón tay ấn vào thịt. Nếu thịt mềm và đàn hồi, đó là bít tết medium rare. Nếu thịt cứng hơn một chút, đó là bít tết medium. Nếu thịt cứng và không đàn hồi, đó là bít tết well done.",
-        ],
-        additionalImageSource:
-          "https://jesspryles.com/wp-content/uploads/2020/08/untitled-1-scaled.jpg",
-      },
-      {
-        title: "Nấu sốt bơ cao bồi",
-        steps: [
-          "Để lửa vừa rồi cho bơ vào chảo phi cùng tỏi và hành",
-          "Tăng lửa chút và khuấy sốt đều cùng mù tạt, các gia vị, và rau củ",
-          "Để sôi, khuấy đều rồi đổ ra bát",
-        ],
-        additionalImageSource:
-          "https://www.seannaskitchen.com/wp-content/uploads/2023/05/Cowboy-Butter-Sauce.jpg",
-      },
-      {
-        steps: [
-          "Để thịt ra đĩa và trưng bày thật đẹp với các món phụ và nước sốt",
-          "Bít tết thường được ăn kèm với các loại rau củ như khoai tây chiên, khoai tay nghiền, salad, rau củ nướng, và cả cơm trắng",
-          "Đây là một món cực kì sang trảnh nhưng lại không quá phức tạp và vô cùng bổ dưỡng, ngon miệng. Nó là bữa ăn phù hợp cho những buổi liên hoan hoặc triêu đãi người thân và gia đình.",
-        ],
-        additionalImageSource:
-          "https://static.wixstatic.com/media/8b0b8d_ae3fe32fa75740dfa091b9b5b978b9f8~mv2.jpg",
-      },
-    ],
-  },
-
-  {
-    avatarSource:
-      "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
-    post: {
-      imageSource:
-        "https://static.wixstatic.com/media/8b0b8d_e9bb368301ae4ff8819b33fec4a309a3~mv2.jpg",
-      favourite: 37,
-      viewer: 113,
-      content:
-        "Cơm rang dưa bò là một món ăn quen thuộc trong ẩm thực Việt Nam và nhiều nước châu Á. Đây là một món ăn được nhiều người yêu thích vì sự kết hợp hoàn hảo của các hương vị: sự mềm và đậm đà của thịt bò, vị chua ngọt của dưa cải và vị giòn của cơm rang trứng. Bình thường, cơm rang dưa bò hay được làm trong nhà hàng vì độ khó và yêu cầu có thiết bị nấu riêng, nhưng bạn hoàn toàn có thể thử sức chế biến đặc sản Việt này mà thỏa thích sáng tạo để phù hợp với sở thích của mình",
-      title: "CƠM RANG DƯA BÒ",
-      poster: "nhatminh250406",
-      date: "July 15",
-      time: "25 min",
-      desc: ["Cơm", "Việt"],
-    },
-    id: "post5",
-    prepare: [
-      "300g thịt bò ",
-      "400g cơm nguội (để qua đêm trong tủ lạnh tối thiểu 1 ngày)",
-      "2 quả trứng",
-      "200g dưa cải chua",
+      "400g ức gà",
       "4 nhánh tỏi",
-      "1 củ hành tím",
-      "Hành lá",
-      "100g dưa chuột muối",
-      "Gia vị: hạt nêm, tiêu đen, bột tỏi, bột hành, xì dầu, dầu hàu, đường",
-      "(Tùy chọn: các loại rau củ khác như cà rốt, ngô, đậu Hà Lan,...)",
-    ],
-    preCook: [
-      "Thái thịt mỏng",
-      "Tỏi, hành bóc vỏ, băm nhỏ",
-      "Rửa sạch các loại rau củ",
-      "Cắt lát nhỏ dưa chuột muối",
-    ],
-    preCookImageSource:
-      "https://vhkt.net/upload/images/mon-an-ngon/com-rang-dua-bo-1.jpg",
-    cookSteps: [
-      {
-        title: "Ướp thịt",
-        steps: [
-          "Cho thịt vào bát cùng với gia vị ướp:",
-          "1 thìa hạt nêm",
-          "1 thìa xì dầu",
-          "1 thìa dàu hàu",
-          "1/3 thìa đường",
-          "1/3 thìa bột tỏi",
-          "1/3 thìa bột hành",
-          "1/3 thìa tiêu đen",
-          "Ướp khoảng 15 phút",
-        ],
-        additionalImageSource:
-          "https://static.wixstatic.com/media/8b0b8d_f1c6bda4b1a34527a3cbe4307fdcc3d3~mv2.jpg",
-      },
-      {
-        title: "Trộn cơm",
-        steps: [
-          "Bỏ cơm nguội ra 1 bát tô trộn đều với:",
-          "2 quả trứng",
-          "1 thìa dầu hàu",
-          "1/2 thìa hạt nêm",
-          "1 thìa xì dầu",
-        ],
-        additionalImageSource:
-          "https://static.wixstatic.com/media/8b0b8d_a485cb69f20e4038add5c46888548aa1~mv2.jpg",
-      },
-      {
-        title: "Rang cơm",
-        steps: [
-          "Để lửa to, đổ dầu vào chảo (chảo wok hoặc loại chảo to là hợp lí nhất) cho nóng khoảng 2 phút",
-          "Đổ cơm đã trộn vào và đảo đều",
-          "Khi cơm đã vàng óng, thêm các loại rau củ tùy thích",
-          "Rang thêm khoảng 5-10 phút cho cơm giòn, cứng",
-          "Xong, đổ cơm ra đĩa",
-        ],
-        additionalImageSource:
-          "https://static.wixstatic.com/media/8b0b8d_b8ab4ec6ea27474dbbc5b202db66c529~mv2.jpg",
-      },
-      // {
-      //   steps: [
-      //     "Rang thêm khoảng 5-10 phút cho cơm giòn, cứng",
-      //     "Xong, đổ cơm ra đĩa"
-
-      //   ],
-      //   additionalImageSource:
-      //     "https://static.wixstatic.com/media/8b0b8d_971f402957154f42ad1c7a6ea45aa3d6~mv2.jpg",
-      // },
-
-      {
-        title: "Xào thịt và dưa",
-        steps: [
-          "Bật lửa to và phi tỏi và hành đến khi thơm",
-          "Bỏ thịt bò vào, đảo nhiều và liên tục để thịt chín đều trong 3-4 phút",
-          "Giảm lửa xuống vừa rồi đổ dưa chua vào, tiếp tục đảo để trộn với thịt trong 2-3 phút",
-          "Nếm và tủy chỉnh gia vị cho phù hợp rồi đổ ra đĩa to",
-        ],
-        additionalImageSource:
-          "https://static.wixstatic.com/media/8b0b8d_481b9252528149358201e6491d1a1acf~mv2.jpg",
-      },
-      {
-        steps: [
-          "Vậy là ta đã hoàn thành món cơm rang dưa bò truyền thống của Việt Nam",
-          "Để thưởng thức, gắp thịt và dưa từ đĩa cho vào cơm rang",
-          "Có thể thêm dì dầu và ăn kèm cùng dưa chuột muối và nhiều loại rau củ khác",
-          "Cơm rang dưa bò là một món phức tạp nhưng rất ngon miệng và bổ dưỡng",
-          "Dù không phải món mà ta có thể nấu hằng ngày, nhưng nó là bữa ăn mà sẽ chắc chắn mang lại cho bạn lời khen từ người thân và gia đình.",
-        ],
-        additionalImageSource:
-          "https://static.wixstatic.com/media/8b0b8d_e9bb368301ae4ff8819b33fec4a309a3~mv2.jpg",
-      },
-    ],
-  },
-
-  {
-    avatarSource:
-      "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
-    post: {
-      imageSource:
-        "https://static.wixstatic.com/media/8b0b8d_ae3fe32fa75740dfa091b9b5b978b9f8~mv2.jpg",
-      favourite: 31,
-      viewer: 106,
-      content:
-        "Bít tết là một món ăn truyền thống của ẩm thực phương Tây, được làm từ thịt bò cắt lát dày, thường là thăn ngoại, thăn vai hoặc thăn lưng. Bít tết có thể được chế biến theo nhiều cách khác nhau, nhưng phổ biến nhất là áp chảo, nướng hoặc chiên.",
-      title: "BÍT TẾT",
-      poster: "nhatminh250406",
-      date: "June 27",
-      time: "15 min",
-      desc: ["Lành mạnh", "Châu Âu"],
-    },
-    id: "post4",
-    prepare: [
-      "400g Thịt bò bít tết (Thường là các loại thăn vì chúng mềm và hợp làm bít tết nhất) ",
-      "Vài nhánh tỏi",
-      "Rau củ tùy thích: cà chua bi, dưa chuột, xà lách, măng xào, ...",
-      "30g bơ",
-      "Gia vị: muối, tiêu, bột tỏi",
-      "(Tùy chọn: Sốt bơ cao bồi",
+      "hành lá",
+      "2 thìa mật ong",
       "20g bơ",
-      "3 nhánh tỏi",
-      "1 củ hành tím",
-      "Mù tạt",
-      "Mùi tây",
-      "Chút chanh",
-      "Muối, tiêu, bột tỏi, hành, ớt)",
+      "1 thìa xì dầu",
+      "1/2 thìa giấm",
+      "Gia vị: muối, tiêu, bột tỏi, bột hành, bột ớt paprika, bột ớt xay",
     ],
     preCook: [
-      "Thấm khô thịt bò",
-      "Cho gia vị, xoa cho đều lên mọi mặt của thịt rồi ướp trong khoảng 15 phút",
-      "Tỏi bóc vỏ, băm nhuyễn hành tím",
-      "Rửa sạch các loại rau củ",
+      "Ức gà rửa sạch, thấm khô, thái miếng cho cùng độ dày khoảng 2-3 cm",
+      "Ướp gà 30 phút bằng các gia vị",
+      "Tỏi bóc vỏ, băm nhỏ.",
     ],
     preCookImageSource:
-      "https://perfectforhome.com/wp-content/uploads/2021/08/opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2015__04__Anova-Steak-Guide-Sous-Vide-Photos04-seasoning-4c1d343ca18e4630b65339948744cb3b.jpg",
+      "https://static.wixstatic.com/media/8b0b8d_625d9e767d9b4d059052039d92533d14~mv2.jpg",
     cookSteps: [
       {
-        title: "Nấu thịt",
+        title: "Nấu gà",
         steps: [
-          "Bắc chảo lên bếp, rồi để ở nhiệt độ cao nhất có thể trong 2 phút",
-          "Cho dầu ăn rồi để dầu nóng trong thêm 2 phút.",
-          "Cho thịt bò vào chảo, áp chảo ở lửa lớn trong 2 phút mỗi mặt.",
-          "Đảo 2-4 lần để làm vỏ thịt giòn",
-          "Giảm lửa xuống vừa",
+          "Vậy là bạn đã thành công nấu được món mì Ý Spaghetti, một món đơn giản nhưng lại vô cùng ngon miệng và bổ dưỡng. Mỳ Ý là một nguồn thực phẩm giàu carbohydrate và chất xơ cùng với các vitamin và khoáng chất quan trọng khác. Nó không có chất béo bão hòa hoặc natri, để bắt đầu. Nó cũng có một lượng đáng kể protein, canxi, phốt pho và magiê. Chắc chắn, đây là một món ăn kinh điển mà không chỉ giàu giá trị dinh dưỡng mà còn kiến gia đình và người thân ngưỡng mộ. Nếu bạn thấy công thức này hay, hãy cân nhắc yêu thích nó và theo dõi page hoặc bình luận để chia sẻ ý kiến của mình. ",
+          "Cho một ít dầu ăn vào chảo, đun nóng. Cho ức gà vào xào ở lửa lớn trong khoảng 4.",
+          "Xào cho đến khi thịt gà đổi nâu thì giảm lửa nhỏ và tiếp tục xào thêm khoảng 6 phút cho thịt gà chín đều và mềm.",
         ],
         additionalImageSource:
-          "https://res.cloudinary.com/hksqkdlah/image/upload/SFS_pan_seared_strip_steaks-34_1_zil1gw.jpg",
+          "https://static.wixstatic.com/media/8b0b8d_7a42659695034c739cad01d621eebec5~mv2.png",
       },
       {
-        title: "Phết bơ và chế biến rau củ",
-        steps: [
-          "Bỏ bơ vào chảo rồi phi thơm với tỏi",
-          "Cho các loại rau củ hoặc rau mùi vào chảo",
-          "Dùng thìa phết bơ lên miếng thịt cho chín đều và đậm vị hơn",
-          "Sau 2-4 phút (Tùy theo sở thích độ tái của ban), tắt lửa và bỏ thịt ra đĩa đợi trong 15 phút",
-          "Mẹo nhỏ: Nếu bạn không có nhiệt kế thịt, bạn có thể kiểm tra độ chín của bít tết bằng cách dùng ngón tay ấn vào thịt. Nếu thịt mềm và đàn hồi, đó là bít tết medium rare. Nếu thịt cứng hơn một chút, đó là bít tết medium. Nếu thịt cứng và không đàn hồi, đó là bít tết well done.",
-        ],
+        steps: ["Xong, bỏ gà ra đĩa để nguội"],
         additionalImageSource:
-          "https://jesspryles.com/wp-content/uploads/2020/08/untitled-1-scaled.jpg",
+          "https://static.wixstatic.com/media/8b0b8d_06a912b59e8343578916a320b23474f9~mv2.jpg",
       },
-      {
-        title: "Nấu sốt bơ cao bồi",
-        steps: [
-          "Để lửa vừa rồi cho bơ vào chảo phi cùng tỏi và hành",
-          "Tăng lửa chút và khuấy sốt đều cùng mù tạt, các gia vị, và rau củ",
-          "Để sôi, khuấy đều rồi đổ ra bát",
-        ],
-        additionalImageSource:
-          "https://www.seannaskitchen.com/wp-content/uploads/2023/05/Cowboy-Butter-Sauce.jpg",
-      },
-      // {
-      //   steps: [
-      //     // "Để thịt ra đĩa và trưng bày thật đẹp với các món phụ và nước sốt",
-
-      // //   additionalImageSource:
-      // //     "https://static.wixstatic.com/media/8b0b8d_06a912b59e8343578916a320b23474f9~mv2.jpg",
-      // // },
       {
         title: "Phi tỏi",
         steps: ["Phi thơm tỏi với bơ với lửa vừa khoảng 3 phút"],
@@ -424,7 +602,7 @@ export const blogs: BlogProps[] = [
           "https://static.wixstatic.com/media/8b0b8d_8ea16ff9ccba4cbd8a7dc34024227dfc~mv2.jpg",
       },
       {
-        title: "Thành quả",
+        title: "end",
         steps: [
           "Ta được một món đơn giản, bổ dưỡng nhưng lại vô cùng thơm ngon và hấp dẫn. Món ăn này có vị ngọt thanh của mật ong, vị thơm của tỏi, vị đậm đà của thịt gà, và rất hợp khi ăn với cơm trắng",
         ],
@@ -434,6 +612,7 @@ export const blogs: BlogProps[] = [
     ],
   },
 
+  //Mì xào
   {
     avatarSource:
       "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
@@ -448,7 +627,7 @@ export const blogs: BlogProps[] = [
       poster: "nhatminh250406",
       date: "May 4",
       time: "15 min",
-      desc: ["Mỳ", "Đơn giản"],
+      desc: ["Mỳ", "Đơn giản", "Việt"],
     },
     id: "post2",
     prepare: [
@@ -500,6 +679,7 @@ export const blogs: BlogProps[] = [
           "https://helenrecipes.com/wp-content/uploads/2021/10/Screenshot-2021-10-06-101702-1200x675.png",
       },
       {
+        title: "end",
         steps: [
           "Mì xào thịt bò có màu sắc bắt mắt, hương vị đậm đà, thơm ngon. Món ăn này có thể ăn nóng hoặc nguội đều rất ngon.",
         ],
@@ -507,6 +687,7 @@ export const blogs: BlogProps[] = [
     ],
   },
 
+  //Mì Ý
   {
     avatarSource:
       "https://lh3.googleusercontent.com/a/ACg8ocIF9NA5n0Ildl0k2jBT3FDjdf16yfm-HT2exJ6UQJkq5Wc=s360-c-no",
@@ -521,7 +702,7 @@ export const blogs: BlogProps[] = [
       poster: "nhatminh250406",
       date: "Apr 15",
       time: "30 min",
-      desc: ["Mỳ", "Châu Âu", "Đơn giản"],
+      desc: ["Mỳ", "Châu Âu", "Phức tạp"],
     },
     id: "post1",
     prepare: [
@@ -598,6 +779,7 @@ export const blogs: BlogProps[] = [
           "https://static.wixstatic.com/media/8b0b8d_f21d633816124f059b30af48b5f2326d~mv2.jpg",
       },
       {
+        title: "end",
         steps: [
           "Vậy là bạn đã thành công nấu được món mì Ý Spaghetti, một món đơn giản nhưng lại vô cùng ngon miệng và bổ dưỡng. Mỳ Ý là một nguồn thực phẩm giàu carbohydrate và chất xơ cùng với các vitamin và khoáng chất quan trọng khác. Nó không có chất béo bão hòa hoặc natri, để bắt đầu. Nó cũng có một lượng đáng kể protein, canxi, phốt pho và magiê. Chắc chắn, đây là một món ăn kinh điển mà không chỉ giàu giá trị dinh dưỡng mà còn kiến gia đình và người thân ngưỡng mộ. Nếu bạn thấy công thức này hay, hãy cân nhắc yêu thích nó và theo dõi page hoặc bình luận để chia sẻ ý kiến của mình. ",
         ],
