@@ -27,7 +27,7 @@ export default function Home() {
     setBlogData(newBlogData);
   };
   useEffect(() => {
-    // createBlog();
+    createBlog();
     fetchBlogs();
   }, []);
   return (
