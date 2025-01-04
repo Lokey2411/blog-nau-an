@@ -61,7 +61,7 @@ export default function Home() {
             <DecorationText text="GARAN APPROVE" color={colors.secondary} />
             <p className="uppercase text-5xl my-16">Những</p>
             <UnderlineText>
-              <p className="text-4xl my-14 text-center">Công thức nổi tiếng hello</p>
+              <p className="text-4xl my-14 text-center">Công thức nổi tiếng</p>
             </UnderlineText>
             <DecorationText text="garan" color={colors.secondary} gap={4} />
           </div>
