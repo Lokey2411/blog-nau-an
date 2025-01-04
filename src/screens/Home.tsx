@@ -27,8 +27,9 @@ export default function Home() {
     setBlogData(newBlogData);
   };
   useEffect(() => {
-    createBlog();
-    fetchBlogs();
+    // createBlog();
+    //fetchBlogs();
+    setBlogData(blogs);
   }, []);
   return (
     <div className="bg-gray-100">
