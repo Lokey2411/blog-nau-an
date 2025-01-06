@@ -24,8 +24,13 @@ export default function Home() {
 
     const blogDocs = await Promise.all(blogPromises);
     const newBlogData = blogDocs.map((doc) => doc.data() as BlogProps);
-    setBlogData(newBlogData);
+
+    // Filter highest views
+    let sortedBlogs = [];
+    sortedBlogs = newBlogData.sort((a, b) => b.post.viewer - a.post.viewer);
+    setBlogData(sortedBlogs);
   };
+  
   useEffect(() => {
     // createBlog();
     fetchBlogs();
