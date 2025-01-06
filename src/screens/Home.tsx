@@ -28,8 +28,7 @@ export default function Home() {
   };
   useEffect(() => {
     // createBlog();
-    //fetchBlogs();
-    setBlogData(blogs);
+    fetchBlogs();
   }, []);
   return (
     <div className="bg-gray-100">
