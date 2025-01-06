@@ -44,7 +44,7 @@ export default function Contact() {
 						<input
 							type="text"
 							className="flex-1 border-b border-b-black mr-6 p-2"
-							placeholder="Name"
+							placeholder="Tên"
 							value={formState.name}
 							onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
 								updateForm("name", event.target.value);
@@ -63,7 +63,7 @@ export default function Contact() {
 					</div>
 					<input
 						type="text"
-						placeholder="Subject"
+						placeholder="Chủ đề"
 						className="w-full border-b border-b-black mr-6 p-2"
 						value={formState.subject}
 						onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
@@ -72,7 +72,7 @@ export default function Contact() {
 					/>
 					<textarea
 						className="flex-1 border-b border-b-black p-2 pb-28 placeholder:text-[#116dff]"
-						placeholder="Type your message here"
+						placeholder="Tin của bạn"
 						value={formState.message}
 						onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
 							updateForm("message", event.target.value);
